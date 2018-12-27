@@ -1,5 +1,5 @@
 # Import the flask library
-from flask import Flask
+from flask import Flask, request
 
 # Create your web server
 app = Flask(__name__)
@@ -9,6 +9,13 @@ app = Flask(__name__)
 def hello_world():
     # Just a simple function that says Hello, World!
     return 'Hello, World!'
+
+@app.route('/greeting', methods=['GET', 'POST'])
+def user_greeting():
+
+    # store the value in the get parameter
+    name = request.values.get('name')
+    return f'Hello {name}'
 
 # Start the web server!
 if __name__ == '__main__':
