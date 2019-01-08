@@ -14,9 +14,9 @@ def hello_world():
 def user_greeting():
 
     # store the value in the get parameter
-    name = request.values.get('text')
+    name = request.values.get('name')
     return f'Hello {name}'
 
 # Start the web server!
 if __name__ == '__main__':
-  app.run()
+    app.run()
