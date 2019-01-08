@@ -14,7 +14,7 @@ def hello_world():
 def user_greeting():
 
     # store the value in the get parameter
-    name = request.values.get('name')
+    name = request.values.get('text')
     return f'Hello {name}'
 
 # Start the web server!
